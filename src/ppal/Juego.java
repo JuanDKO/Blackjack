@@ -79,6 +79,7 @@ public class Juego {
 		
 	}
 
+
 	private static void juegaBanca() throws NoHayMasCartasException {
 		// Debe saber la puntuación del jugador e intentar superarla
 		// sin pasarse.
@@ -89,6 +90,7 @@ public class Juego {
 				&& jugador.valorMano()<=21);
 		System.out.println("La banca ha sacado: "+banca);
 	}
+
 
 	public static void inicializaJuego() {
 		baraja = new Mazo();

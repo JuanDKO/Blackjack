@@ -8,8 +8,8 @@ public class Carta {
 	
 	private int numero;
 	private Palo palo;
-	
-	
+
+
 	public Carta(int numero, Palo palo) {
 		if (numero>=1 && numero<=13) {
 			this.numero = numero;
@@ -24,7 +24,8 @@ public class Carta {
 	public Palo getPalo() {
 		return palo;
 	}
-	
+
+
 	public int getValor() {
 		int valor;
 		
@@ -38,7 +39,12 @@ public class Carta {
 
 		return valor;
 	}
-	
+
+	/**
+	 *
+	 *
+	 * @return Te devuelve un texto que es el palo de la carte dependiendo del numero y si no coincide te devuelve el numero
+	 */
 	public String mostrarNumero() {
         if (this.numero == 1) {
             return "AS";

@@ -17,7 +17,11 @@ public class Mano extends Mazo {
 		}
 		return valor;
 	}
-	
+
+	/**
+	 *
+	 * @return Cuando el valor de la mano es mayor a 21 se devuelve un boolean true que finaliza la partida
+	 */
 	public boolean finDeJuego() {
 		if (this.valorMano()>=21) {
 			return true;
@@ -31,7 +35,12 @@ public class Mano extends Mazo {
 		res=res+super.toString();
 		return res;
 	}
-	
+
+	/**
+	 *
+	 * @param m Te trae la primera carta de una lista de cartas de el objeto mazo
+	 * @throws NoHayMasCartasException si algo falla esta excepción se pasa al metodo de la clase mazo.
+	 */
 	public void pedirCarta(Mazo m) throws NoHayMasCartasException {
 		Carta c = m.solicitarCarta();
 		this.cartas.add(c);

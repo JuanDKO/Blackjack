@@ -20,8 +20,10 @@ public class Mazo {
 			}
 		}
 	}
-	
-	
+
+	/**
+	 * Simplemente usa shuffle en la lista de cartas para reordenarlas
+	 */
 	public void barajar() {
 		Collections.shuffle(cartas);
 	}
@@ -35,7 +37,12 @@ public class Mazo {
 		}
 		return res;
 	}
-	
+
+	/**
+	 *
+	 * @return Te devuelve la primera carte del array de cartas y elimina esa carta del array
+	 * @throws NoHayMasCartasException en caso de que la lista de cartas este vacia tira este error
+	 */
 	public Carta solicitarCarta() throws NoHayMasCartasException {
 		if (this.cartas.isEmpty()) {
 			throw new NoHayMasCartasException();
